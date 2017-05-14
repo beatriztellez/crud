@@ -1,0 +1,32 @@
+{% extends 'adminlte/base.html' %}
+    {% block meta %}
+        <meta charset="UTF-8">
+    {% endblock %}
+    {% block title %}Document{% endblock %}
+    {% block extra_head %}
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="../static/css/base.css">
+    {% endblock %}
+{% block content %}   
+
+<center><label class="tienda" style="color: black">"Crud"</label></center><br><br>
+
+
+<!-- <a href="{% url 'courses:new' %}">Agregar curso</a> -->
+</p>
+<ul>
+    {% for course in object_list %}
+        <li>
+            <p>{{ course.name }}</p>
+            <p>
+                <a href="{% url 'courses:detail' course.id %}">Ver</a> | 
+                <a href="{% url 'courses:edit' course.id %}">Editar</a> | 
+                <a href="{% url 'courses:delete' course.id %}">Borrar</a>| 
+               <!-- <a href="{% url 'courses:reporte_pdf'  %}"> </a> |--> 
+            </p>
+        </li>
+    {% endfor %}
+</ul>
+    
+
+{% endblock %}

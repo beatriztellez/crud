@@ -1,0 +1,24 @@
+{% extends 'adminlte/base.html' %}
+	
+	{% block meta %}
+		<meta charset="UTF-8">
+	{% endblock %}
+
+	{% block title_outer %}
+		<title>{% block title %}{{ course.name }}{% endblock %}</title>
+	{% endblock %}
+
+
+{% block extra_head %}
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="../../static/css/base.css">
+	{% endblock %}
+
+{% block content %}
+	<center><label class="tienda" style="color: black">{{ course.name }}</label></center><br><br>
+
+       
+<center><p style="font-size: 24px">Fecha de inicio: <i>{{ course.start_date }}</i></p></center>
+<center><p style="font-size: 24px">Fecha de fin: <i>{{ course.end_date }}</i></p></center>
+
+{% endblock %}

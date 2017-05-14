@@ -1,0 +1,47 @@
+table{
+	border-color: white;
+	border-width:10px;
+	margin: auto;
+	text-align: center;
+	padding-top: 20px;
+}
+
+table td{
+	padding-bottom: 10px;
+	font-size: 1.70em;
+	font-family: "Homer Simpson", cursive;
+}
+
+.tienda{
+	text-align: center;
+	font-size: 3em;
+	font-family: 'Baloo', cursive;
+	padding: 10px 10px;
+}
+
+
+img{
+	width: 200px;
+	height: 150px;
+}
+
+img:hover{
+	transform: scale(2.1);
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+td{
+	color: white;
+
+}
+
+input{
+	width: 100%;
+}
+
+span{
+	width: 100%;
+}

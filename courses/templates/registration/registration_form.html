@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block extra_head %}
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="../../static/css/base.css">
+{% endblock %}
+{% block content %}
+<form method="post" action="">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <input type="submit" value="{% trans 'Enviar' %}" />
+</form>
+{% endblock %}

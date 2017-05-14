@@ -1,0 +1,18 @@
+{% extends 'adminlte/base.html' %}
+	{% block meta %}
+		<meta charset="UTF-8">
+	{% endblock %}
+	{% block title %}Document{% endblock %}
+	{% block extra_head %}
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="../static/css/base.css">
+	{% endblock %}
+
+{% block content %}
+
+	<form method="post" enctype="multipart/form-data">{% csrf_token %}
+	    ¿Estás seguro que deseas borrar el curso "{{ object }}"?
+	    <input type="submit" value="Submit" />
+	</form>
+
+{% endblock %}
